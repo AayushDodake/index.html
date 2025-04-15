@@ -3,221 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Web Design Template</title>
+  <title>Modern Web Page Design</title>
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif; /* Changed font family */
-      background-color: #f0f4f8; /* Lighter background color */
+      font-family: 'Roboto', sans-serif; /* Modern font */
+      background-color: #f4f7fa; /* Light gray background */
+      color: #333;
     }
 
+    /* Header section */
     header {
-      background: linear-gradient(90deg, #e74c3c, #f39c12); /* Gradient from red to yellow */
+      background: #4CAF50; /* Green background */
       color: white;
-      padding: 25px 0; /* Increased padding */
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: center;
-      background-color: #34495e; /* Dark gray background */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background: #2c3e50; /* Dark blue-gray background */
+      padding: 10px 0;
     }
 
     nav a {
       color: white;
-      padding: 18px 35px; /* Adjusted padding */
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease, color 0.3s ease;
+      padding: 14px 30px;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      background-color: #f1c40f; /* Hover color changed to yellow */
-      color: #2c3e50; /* Hover text color */
+      background: #f39c12; /* Hover color is yellow */
+      color: #2c3e50;
     }
 
-    .main {
-      text-align: center;
-    }
-
-    .marq {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    .MET {
-      font-size: 36px; /* Larger text for marquee */
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .MET1 {
-      font-size: 20px;
-      color: #ffe;
-    }
-
-    .container {
-      flex: 1;
+    /* Main content */
+    .main-content {
       max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px; /* Increased padding */
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .main-content h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #2c3e50;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Wider boxes */
-      gap: 30px; /* Increased gap between boxes */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
     }
 
-    .box {
-      background-color: #ecf0f1;
+    .card {
+      background-color: #ffffff;
       padding: 20px;
-      border-radius: 10px; /* Slightly rounded corners */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Increased transition duration */
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Larger shadow */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .box:hover {
-      transform: translateY(-8px); /* Slightly larger hover effect */
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Larger shadow on hover */
-    }
-
-    .box img {
+    .card img {
       width: 100%;
-      height: 220px; /* Adjusted image height */
+      height: 200px;
       object-fit: cover;
       border-radius: 10px;
     }
 
-    .box h3 {
+    .card h3 {
       margin-top: 20px;
+      font-size: 22px;
       color: #2c3e50;
     }
 
-    .box ul {
-      padding-left: 18px;
+    .card ul {
+      padding-left: 0;
+      list-style-type: none;
     }
 
-    .box ul li a {
+    .card ul li a {
       text-decoration: none;
       color: #34495e;
+      display: block;
+      margin: 10px 0;
+      font-size: 18px;
+      transition: color 0.3s;
     }
 
-    .box ul li a:hover {
-      text-decoration: underline;
-      color: #e74c3c; /* Hover color changed to red */
+    .card ul li a:hover {
+      color: #4CAF50; /* Green hover color */
     }
 
-    .footer {
-      background: linear-gradient(90deg, #16a085, #1abc9c); /* Gradient from teal to green */
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
       color: white;
       text-align: center;
-      font-size: 14px;
-      padding: 25px; /* Increased padding */
+      padding: 20px 0;
+      margin-top: 50px;
     }
 
-    @media screen and (max-width: 480px) {
-      header {
-        font-size: 22px;
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
       }
 
-      .box h3 {
-        font-size: 20px;
+      nav a {
+        font-size: 16px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .card h3 {
+        font-size: 18px;
+      }
+
+      footer p {
+        font-size: 12px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="main">
-    <marquee class="marq" bgcolor="#e74c3c" direction="left">
-      <div class="MET">MET BKC IOT Poly IT Department</div>
-      <div class="MET1">Created By: Mr. Aayush Dodake</div>
-    </marquee>
-  </div>
 
+  <!-- Header -->
   <header>
-    <h1>Practicals Learn in Web Page Designing</h1>
+    <h1>Web Page Design Learning Hub</h1>
+    <p>Explore various web design practices and techniques</p>
   </header>
 
+  <!-- Navigation Bar -->
   <nav>
     <a href="https://metbhujbalknowledgecity.ac.in/metpoly/" target="_blank">MET Poly</a>
     <a href="https://metbhujbalknowledgecity.ac.in/metpoly/information-technology/" target="_blank">IT Dept.</a>
     <a href="https://metbhujbalknowledgecity.ac.in/metpoly/it-vision-mission/" target="_blank">Dept. Vision</a>
-    <a href="https://metbhujbalknowledgecity.ac.in/metpoly/it-faculty/">Staff</a>
+    <a href="https://metbhujbalknowledgecity.ac.in/metpoly/it-faculty/" target="_blank">Staff</a>
   </nav>
 
-  <div class="container">
-    <section class="grid">
-      <div class="box">
-        <img src="https://via.placeholder.com/350x180.png?text=HTML+Intro" alt="HTML Introduction Image">
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <h2>Practical Learning for Web Design</h2>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=HTML+Introduction" alt="HTML Introduction">
         <h3>Introduction to HTML</h3>
         <ul>
-          <li><a href="1.html">prac 1</a> - Basic HTML tags</li>
-          <li><a href="2.html">prac 2</a> - Heading tags</li>
-          <li><a href="3.html">Prac 3</a> - Paragraph in web page</li>
-          <li><a href="4.html">Prac 4</a> - Block level tags</li>
-          <li><a href="5.html">Prac 5</a> - Text level tag</li>
-          <li><a href="6.htm">Prac 6</a> - Border Properties</li>
-          <li><a href="7.html">Prac 7</a> - Special characters</li>
+          <li><a href="1.html">Prac 1</a> - Basic HTML Tags</li>
+          <li><a href="2.html">Prac 2</a> - Heading Tags</li>
+          <li><a href="3.html">Prac 3</a> - Paragraphs</li>
         </ul>
       </div>
 
-      <div class="box">
-        <img src="https://via.placeholder.com/350x180.png?text=Lists+and+Links" alt="Lists and Links Image">
-        <h3>Lists and Links</h3>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=CSS+Basics" alt="CSS Basics">
+        <h3>CSS Basics</h3>
         <ul>
-          <li><a href="8.html">Prac 8</a> - Ordered & Unordered lists</li>
-          <li><a href="9.html">Prac 9</a> - Different list types</li>
-          <li><a href="10.html">Prac 10</a> - Web page link</li>
-          <li><a href="11.html">Prac 11</a> - Links in web page</li>
-          <li><a href="12.html">Prac 12</a> - Links with images</li>
-          <li><a href="13.html">Prac 13</a> - Colors for links</li>
+          <li><a href="4.html">Prac 4</a> - Styling Text</li>
+          <li><a href="5.html">Prac 5</a> - Colors and Fonts</li>
+          <li><a href="6.html">Prac 6</a> - Box Model</li>
         </ul>
       </div>
 
-      <div class="box">
-        <img src="https://via.placeholder.com/350x180.png?text=Images+and+Colors" alt="Images and Colors Image">
-        <h3>Images, Colors and Background</h3>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Responsive+Design" alt="Responsive Design">
+        <h3>Responsive Design</h3>
         <ul>
-          <li><a href="14.html">Prac 14</a> - Foreground and background images</li>
-          <li><a href="15.html">Prac 15</a> - Image with hyperlink</li>
-          <li><a href="16.html">Prac 16</a> - Background properties</li>
+          <li><a href="7.html">Prac 7</a> - Media Queries</li>
+          <li><a href="8.html">Prac 8</a> - Flexbox Layout</li>
+          <li><a href="9.html">Prac 9</a> - Grid Layout</li>
         </ul>
       </div>
 
-      <div class="box">
-        <img src="https://via.placeholder.com/350x180.png?text=Tables+and+Forms" alt="Tables and Forms Image">
-        <h3>Table, Frames and Forms</h3>
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=JavaScript+Intro" alt="JavaScript Intro">
+        <h3>JavaScript Basics</h3>
         <ul>
-          <li><a href="17.html">Prac 17</a> - Table in web page</li>
-          <li><a href="18.html">Prac 18</a> - Nested tables & images</li>
-          <li><a href="19.html">Prac 19</a> - Table row/column attributes</li>
-          <li><a href="20.html">Prac 20</a> - Frames</li>
-          <li><a href="21.html">Prac 21</a> - HTML Forms</li>
+          <li><a href="10.html">Prac 10</a> - Variables and Functions</li>
+          <li><a href="11.html">Prac 11</a> - DOM Manipulation</li>
+          <li><a href="12.html">Prac 12</a> - Event Handling</li>
         </ul>
       </div>
-
-      <div class="box">
-        <img src="https://via.placeholder.com/350x180.png?text=CSS+Styles" alt="CSS Styles Image">
-        <h3>Cascading Style Sheets</h3>
-        <ul>
-          <li><a href="22.html">Prac 22</a> - CSS stylesheets</li>
-          <li><a href="23.html">Prac 23</a> - Responsive Web Design</li>
-          <li><a href="24.html">prac 24</a> - Hosting website on open source</li>
-          <li><a href="25.html">Prac 25</a> - Portfolio website</li>
-        </ul>
-      </div>
-    </section>
+    </div>
   </div>
 
-  <div class="footer">
-    <h1>Resize the browser window to see how the content responds to resizing.</h1>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>Created by Mr. Aayush Dodake | MET BKC IOT Poly IT Department</p>
+  </footer>
+
 </body>
 </html>
-
